@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .rainbow-text {
+    color: white;
+    text-shadow: 
+      3px 3px 0 #ff1493,
+      6px 6px 0 #4169e1,
+      9px 9px 0 #ffd700;
+    animation: rainbow-shadow 4s ease-in-out infinite;
+  }
+}
+
+@keyframes rainbow-shadow {
+  0%, 100% {
+    text-shadow: 
+      3px 3px 0 #ff1493,
+      6px 6px 0 #4169e1,
+      9px 9px 0 #ffd700;
+  }
+  33% {
+    text-shadow: 
+      3px 3px 0 #ffd700,
+      6px 6px 0 #ff1493,
+      9px 9px 0 #4169e1;
+  }
+  66% {
+    text-shadow: 
+      3px 3px 0 #4169e1,
+      6px 6px 0 #ffd700,
+      9px 9px 0 #ff1493;
+  }
+}
